@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+import Header from "./components/Header"
 function App() {
   return (
     <div>
@@ -8,7 +8,8 @@ function App() {
         <Switch>
           <Route exact path='/'>
             {/* Add Header , Main , Footer */}
-            Hello Everyone !!
+            {/* Hello Everyone !! */}
+            <Header></Header>
           </Route>
           <Route path='/mens'>
             {/* Add Header ,Men Products and Footer */}
