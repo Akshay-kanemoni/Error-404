@@ -1,0 +1,31 @@
+.main{
+background-color: rgb(250, 246, 246);
+}
+.main_header img{
+    width:100%
+}
+.main_row1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+.main_img img{
+    width:270px
+}
+.main-row2-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.main_row3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+@media(max-width:764px){
+.main_img img{
+    width:150px;
+
+    }
+
+}
