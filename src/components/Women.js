@@ -4,6 +4,7 @@ import { Product } from './Product'
 import { womensDetails } from './productDetails'
 import { FilterPopUp } from './FilterPopUp'
 import { FilterHandlers } from './FilterHandlers'
+import { Link } from 'react-router-dom'
 
 export default function Womens() {
 
@@ -14,10 +15,10 @@ export default function Womens() {
     const { handleHighToLowPrice, handleLowToHighPrice, handleHighToLowRating, handleLowToHighRating } = FilterHandlers(setIsCurrentState, isCurrentState)
 
     return (
-        <div>
+        <>
             <div className={Styles.section_1}>
                 <div className={Styles.breadCrum}>
-                    <p>Home / Clothing / <span>Women's Fashion</span></p>
+                    <p><Link to='/' style={{ textDecoration: "none", color: "#000" }}>Home</Link> / Clothing / <span>Women's Fashion</span></p>
                 </div>
             </div>
             <div className={Styles.section_2}>
@@ -82,13 +83,10 @@ export default function Womens() {
 
             {/* Popup */}
             <div className={isPopup ? Styles.popupOn : Styles.popupOff} onClick={() => setIsPopup(false)}>
-                <FilterPopUp
-                    isCurrentState={isCurrentState}
-                    setIsCurrentState={setIsCurrentState}
-                />
+                <FilterPopUp />
             </div>
 
-        </div >
+        </ >
     )
 }
 

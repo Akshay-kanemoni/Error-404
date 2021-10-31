@@ -8,6 +8,9 @@ export function Product(props) {
 
     let [isEnable, setIsEnable] = useState(false);
 
+    let [isEnableButton, setIsEnableButton] = useState(true);
+    let [isEnableWish, setIsEnableWish] = useState(true);
+
     return <div className={Styles.product}>
         <div className={Styles.image_container}>
             <img src={image} alt={_id} onMouseEnter={() => setIsEnable(true)} onMouseLeave={() => setIsEnable(false)} />
@@ -22,8 +25,14 @@ export function Product(props) {
                 </div>
             </div>
             <div className={isEnable ? Styles.product_btnOn : Styles.product_btn} onMouseEnter={() => setIsEnable(true)} onMouseLeave={() => setIsEnable(false)}>
-                <button className={Styles.card_btn}>Add to Cart</button>
-                <button className={Styles.wish_btn}>Wish List</button>
+                {
+                    isEnableButton ? <button className={Styles.card_btn} onClick={() => setIsEnableButton(false)}>Add to Cart</button> :
+                        <button className={Styles.added_Cart}>Added To Cart</button>
+                }
+                {
+                    isEnableWish ? <button className={Styles.wish_btn} onClick={() => setIsEnableWish(false)}>Wish List</button> :
+                        <button className={Styles.added_Cart}>Added To Wish</button>
+                }
             </div>
         </div>
         <div className={Styles.product_prize}>
