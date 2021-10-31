@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Main from './components/Main';
 
 
 import Mens from './components/Mens'
@@ -14,10 +15,14 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'>
+
+            <Main />
+
             {/* Add Header , Main , Footer */}
 
             {/* Hello Everyone !! */}
             <Header></Header>
+ main
 
           </Route>
           <Route path='/mens'>
