@@ -1,0 +1,247 @@
+.main{
+    display: flex;
+    border-bottom: 1px solid #d2d2d2;
+    flex-wrap:wrap ;
+  
+}
+.logo img{
+    width: 50px;
+    margin-top: 10px;
+}
+.categories{
+    margin-left: 20px;
+    
+}
+.categories_1{
+    margin-left: -10px;
+  
+}
+.search_bar input{
+    width: 600px;
+    height: 30px;
+    margin-top: 19px;
+    margin-left: 12px;
+    border: 2px solid white;
+    background-color: whitesmoke;
+    padding: 5px;
+}
+.profile{
+    margin-left: 80px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.font_profile{
+    margin-top: -5px;
+}
+.wishlist{
+    margin-left: 30px;
+    font-size: 12px;
+    margin-top: 10px
+
+}
+.bag{
+    margin-left: 30px;
+    font-size: 12px;
+    margin-top: 10px
+
+}
+.search {
+    width: 8px;
+    height: 8px;
+    margin-top: 10px;
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown1:hover .dropdown-content1 {display: block;}
+.dropdown2:hover .dropdown-content2 {display: block;}
+.dropdown3:hover .dropdown-content3 {display: block;}
+.dropdown4:hover .dropdown-content4 {display: block;}
+.dropdown-content {
+    display: none;
+    background-color: whitesmoke;
+  }
+.dropdown-content1 {
+    display: none;
+    background-color: whitesmoke;
+  }
+.dropdown-content2 {
+    display: none;
+    background-color: whitesmoke;
+  }
+.dropdown-content3 {
+    display: none;
+    background-color: whitesmoke;
+  }
+.dropdown-content4 {
+    display: none;
+    background-color: whitesmoke;
+ }
+ .header_icons{
+     text-align: center;
+ }
+  
+  .dropdown_category{
+      display: flex;
+      width: 850px;
+      position: absolute;
+      top:52px;
+      left:-10px;
+      background-color: whitesmoke;
+      z-index: 100;
+
+  }
+  .dropdown_category1{
+    display: flex;
+    width: 850px;
+    position: absolute;
+    top:73px;
+    left: 30px;
+    background-color: whitesmoke;
+    z-index: 100;
+
+}
+
+.dropdown_category3{
+    display: flex;
+    width: 270px;
+    height: 300px;
+    position: absolute;
+    top:73px;
+    background-color: rgba(245, 245, 245, 0.966);
+    z-index: 100;
+    right: 65px;
+
+}
+
+  .Header_column ul{
+list-style: none;
+  }
+
+  .Header_column ul label{
+      color:#ff527b;
+      font-size: 12px;
+  }
+
+  .Header_column1 ul li{
+    color:#140f10;
+    font-size: 14px;
+    list-style: none;
+    text-align: left;
+    margin-left: -32px;
+}
+
+.Header_column1 ul label{
+    color:#140f10;
+    font-size: 17px;
+    list-style: none;
+    margin-left: -32px;
+}
+
+.Header_column1 ul button{
+    border: 1px solid black;
+    color: #ff527b;
+    background-color: white;
+    margin-left: -32px;
+    font-size: 15px;
+}
+
+.Header_column1 ul hr{
+    margin-left: -35px;
+    color: black;
+}
+
+  .Header_column ul li{
+      font-size: 10px;
+  }
+
+  .categories{
+      display: flex;
+      align-items: center;
+  }
+  .Mobile_cat{
+      display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+  @media(max-width:768px){
+      .main{
+          width: 100%;
+          max-width: 400px;
+      }
+  .categories{
+      display: none;
+  }
+  .search_bar input{
+      width: 300px;
+      margin-left: 10px;
+      height: 30px;
+  }
+  .icons{
+      font-size: 21px !important;
+  }
+  .bag{
+      display: none;
+  }
+  .wishlist{
+      display: none;
+  }
+.Mobile_cat{
+    display: flex;
+    width: 280px;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile{
+    margin-left: 35px;
+}
+
+.dropdown_category3{
+    display: flex;
+    width: 170px;
+    height: 310px;
+    position: absolute;
+    top:125px;
+    background-color: rgba(245, 245, 245, 0.966);
+    z-index: 100;
+    right: 0px;
+
+}
+.Header_column1 ul li{
+    color:#140f10;
+    font-size: 13px;
+    list-style: none;
+    text-align: left;
+    margin-left: -32px;
+}
+
+.Header_column1 ul label{
+    color:#140f10;
+    font-size: 15px;
+    list-style: none;
+    margin-left: -32px;
+}
+
+
+.Header_column1 ul hr{
+    margin-left: -35px;
+}
+.Header_column1 ul button{
+    border: 1px solid black;
+    color: #ff527b;
+    background-color: white;
+    margin-left: -32px;
+    font-size: 13px;
+}
+
+
+
+
+  
+  }
