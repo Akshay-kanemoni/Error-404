@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Styles from './Product.module.css';
 import StarIcon from '@material-ui/icons/Star';
+import BusIcon from '@material-ui/icons/LocalShipping'
 
 export function Product(props) {
 
@@ -39,4 +40,39 @@ export function Product(props) {
             <p>Rs.{prize} _<del>Rs.{oldPrize}</del> <span>( {offer}% Off )</span></p>
         </div>
     </div>;
+}
+
+
+export function WishlistProduct(props) {
+
+    let { _id, image, brandName, name, price, oldPrice, offer } = props
+
+    const [isAddToCart, setIsAddToCart] = useState(true);
+
+    return (
+        <div className={Styles.wishlist_product}>
+            <div className={Styles.wishlist_image}>
+                <img src={image} alt={_id} />
+            </div>
+            <div className={Styles.wishlist_details}>
+                <span>{brandName}</span>
+                <p>{name}</p>
+                <div className={Styles.wishlist_price}>
+                    <p>Rs.{price} _<del>Rs.{oldPrice}</del> <span>( {offer}% Off )</span></p>
+                </div>
+                <div className={Styles.wishlist_delivery}>
+                    <span><BusIcon className={Styles.wishlist_devIcon} /> Free Delivery is Available </span>
+                </div>
+                <div className={Styles.wishlist_btns}>
+                    {
+                        isAddToCart ?
+                            <button className={Styles.wishlist_cartbtn} onClick={() => setIsAddToCart(false)}>Bag</button>
+                            :
+                            <button className={Styles.wishlist_addedCart}>Added</button>
+                    }
+                    <button className={Styles.wishlist_remove} >Remove</button>
+                </div>
+            </div>
+        </div>
+    )
 }

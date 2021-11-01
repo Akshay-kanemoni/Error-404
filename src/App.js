@@ -8,6 +8,7 @@ import Mens from './components/Mens'
 import Shoes from './components/Shoes';
 import Womens from './components/Women';
 import Header from "./components/Header"
+import WishList from './components/WishList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/'>
             <Header></Header>
             <Main />
+            <Footer />
           </Route>
           <Route path='/mens'>
             <Header></Header>
@@ -36,8 +38,12 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/wishlist">
+            <Header></Header>
+            <WishList />
+            <Footer />
+          </Route>
         </Switch>
-
       </Router>
 
     </div>
